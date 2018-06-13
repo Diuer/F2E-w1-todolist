@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>F2E-W1-todolist</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <head>
+  <script src="https://use.fontawesome.com/248751b450.js">
+  </script>
+</head>
+<body onload="init('default')">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<div id="top">
+  <div id="topnav">
+    <div class="nav_name nav1" onclick="enterMyTasks('default')">
+      <p>My Tasks</p>
+    </div>
+    <div class="nav_name nav2" onclick="enterInProgress('default')">
+      <p>in Progess</p>
+    </div>
+    <div class="nav_name nav3" onclick="enterCompleted('completed')">
+      <p>Completed</p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div id="body">
+  <input type="text" id="addtasks" placeholder="+ Add Task" onclick="showInputTask()">
+  <div id="inputTasks" style="display:none;">
+    <div class="inputTasksTitle">
+      <p>Type Something Here…</p>
+    </div>
+    <div class="inputTasksDetail">
+      <p>DeadLine</p>
+      <input type="text" placeholder="yyyy/mm/dd" id="deadline_date">
+      <input type="text" placeholder="hh:mm" id="deadline_time">
+      <p>Comment</p>
+      <textarea placeholder="Type your memo here…" id="comment"></textarea>
+    </div>
+    <input type="button" id="btn-cancel" value="X Cancel" onclick="showAddTask()">
+    <input type="button" id="btn-add" value="＋ Add Task" onclick="addTask('default')">
+    <div class="clearfix"></div>
+  </div>
+  <div id="task">
+    <!--
+    <li class='li'>
+      <div class='tasks'>
+        <div class='firstline'>
+          <input type='checkbox' class='checkbox ' onclick='finishTask("default")'>
+          <p class='todo'>this is no 1.</p>
+          <div class="star star-1" onclick="deleteFavorite(this)">
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          <div class="star-o star-o-1" onclick="addFavorite(this)">
+            <i class="fa fa-star-o" aria-hidden="true""></i>
+          </div>
+          <div class="trash trash-1" onclick="deleteTask('default')">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class='secondline'>
+          <p class='calender_date'>1111/11/11 11:11</p>
+        </div>
+      </div>
+    </li>
+    -->
+  </div>
+</div>
+<div id="bottom">
+  
+</div>
+  <script src='https://codepen.io/timivey/pen/emQZYY.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
