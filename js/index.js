@@ -69,7 +69,6 @@ function enterCompleted(sign){
   nav1.style.border="0px";
   nav2.style.color="#00408B";
   nav2.style.border="0px";
-  document.getElementById("nav2").style.border="0px";
   for (var completed=0; completed<window.localStorage.length; completed=completed+4){
     if(window.localStorage.getItem("checkbox"+completed)=="false"){
       document.querySelector(".li"+completed).style.display="none";
@@ -149,9 +148,6 @@ function finishTask(sign){
       window.localStorage.setItem('checkbox'+x,"true");
     }else{
       window.localStorage.setItem('checkbox'+x,"false");
-      document.querySelector(".checkbox"+x).checked=false;
-      document.querySelector(".todo"+x).innerHTML=window.localStorage.getItem("todo"+x);
-      document.querySelector(".todo"+x).style.color="#000000";
     }
   }
   updates(sign);
